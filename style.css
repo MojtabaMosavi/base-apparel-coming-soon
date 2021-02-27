@@ -1,0 +1,169 @@
+:root {
+  --Desaturated-Red-: hsl(0, 36%, 70%);
+  --Soft-Red-: hsl(0, 93%, 68%);
+  --Dark-Grayish-Red-: hsl(0, 6%, 24%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+  max-width: 1440px;
+  min-width: 375px;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+.container {
+  width: 60%;
+  padding: 3em 0;
+  margin: 0 auto;
+}
+
+.logo {
+  margin-bottom: 4em;
+}
+
+.col1 {
+  width: 60%;
+  background: url("images/bg-pattern-desktop.svg");
+}
+
+.col1 section h1 {
+  font-size: 4em;
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.3em;
+}
+
+.col1 section p {
+  margin-bottom: 2em;
+  word-spacing: 0.1em;
+  line-height: 1.3em;
+  font-weight: 600;
+  color: var(--Desaturated-Red-);
+}
+
+.col h1 .colored {
+  color: var(--Desaturated-Red-);
+  font-weight: 300;
+}
+
+.col2 {
+  width: 40%;
+  background: url("images/hero-desktop.jpg") no-repeat center;
+  background-size: cover;
+}
+
+form > .email {
+  position: relative;
+  outline: none;
+}
+
+#email {
+  padding: 1em;
+  border: 1px solid gray;
+  border-radius: 100px;
+  border-color: gray;
+  outline: none;
+  width: 100%;
+  font-size: 1em;
+}
+#email:focus,
+#submit:focus {
+  outline: none;
+}
+
+form .email #submit {
+  position: absolute;
+  top: 0;
+  left: 80%;
+  width: 20%;
+  font-size: 1.05em;
+  background: url("images/icon-arrow.svg") no-repeat center center,
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: none;
+  padding: 1em;
+  border-radius: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+form .email #submit:hover {
+  opacity: 0.7;
+}
+
+form .email .helpText {
+  width: 90%;
+  display: block;
+  padding: 0.1em 0em;
+  font-size: 1em;
+  margin: 0.5em auto;
+  color: red;
+}
+
+.invalid {
+  background: url("images/icon-error.svg") no-repeat 75%;
+}
+
+@media screen and (max-width: 800px) {
+  .container {
+    width: 70%;
+  }
+  .col1 section h1 {
+    font-size: 3em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .col1 section h1 {
+    font-size: 2em;
+  }
+  .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 3em;
+  }
+  .col1 {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .col1 section p,
+  .col1 section h1 {
+    text-align: center;
+  }
+  .mobile-pic {
+    background: url("images/hero-mobile.jpg") center no-repeat;
+    background-size: cover;
+    margin-bottom: 1em;
+    height: 300px;
+    width: 100%;
+  }
+  .logo {
+    margin-bottom: 2em;
+  }
+  .col2 {
+    display: none;
+  }
+
+  section,
+  .logo {
+    width: 90%;
+    margin: 2em auto;
+  }
+}
