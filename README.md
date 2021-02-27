@@ -1,3 +1,3 @@
 # base-apparel-coming-soon
 Desktop look
-![].(images/desktop)
+![].(images/desktop-design.jpg)
